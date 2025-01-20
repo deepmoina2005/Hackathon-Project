@@ -22,7 +22,7 @@ const About = () => {
               We connect buyers and sellers in a seamless and interactive platform.
             </p>
             <button
-              onClick={() => window.open("http://localhost:5173/", "_blank")}
+              onClick={() => window.open("https://hackathon-project-henna.vercel.app/", "_blank")}
               className="inline-block bg-primary2 text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-primary2-dark transition duration-200"
             >
               Start Shopping

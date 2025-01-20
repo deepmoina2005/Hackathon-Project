@@ -122,7 +122,7 @@ const Navbar = () => {
               <PiShoppingCartThin />{getCartCount()}
             </button>
             <button
-              onClick={() => window.open("http://localhost:5174/", "_blank")}
+              onClick={() => window.open("https://hackathon-project-u6by.vercel.app/", "_blank")}
               className="border-2 hover:border-primary2 text-white bg-primary2 font-semibold rounded-md px-6 py-2 duration-200 hidden md:block"
             >
               Business
