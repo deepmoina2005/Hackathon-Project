@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { X } from "lucide-react"; // Importing the X icon from Lucide
 import { useNavigate } from "react-router-dom"; // Importing useNavigate from react-router-dom
-import Step1 from "./Registration/Step1";
-import Step2 from "./Registration/Step2";
-import Step3 from "./Registration/Step3";
+import Step1 from "./step1";
+import Step2 from "./step2";
+import Step3 from "./step3";
 
 const MultiStepForm = () => {
   const [step, setStep] = useState(1);
