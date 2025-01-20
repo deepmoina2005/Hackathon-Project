@@ -10,8 +10,10 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { IoNotificationsOutline } from "react-icons/io5";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { ShopContext } from "@/contacts/ShopContext";
 
 const Navbar = () => {
+  const {setShowSearch, getCartCount} = useContext(ShopContext);
   const navigate = useNavigate();
   const { userData, backendUrl, setUserData, setIsLoggedin } =
     useContext(AppContext);
@@ -57,7 +59,7 @@ const Navbar = () => {
   return (
     <>
       <nav>
-        <div className="flex justify-between items-center bg-blue-100 px-8 py-5 fixed top-0 w-full right-0 z-50">
+        <div className="flex justify-between items-center bg-blue-100 px-8 py-5 top-0 w-full right-0 z-50">
           {/* Logo Section */}
           <NavLink
             to="/"
@@ -77,9 +79,9 @@ const Navbar = () => {
                 </li>
                 {/* <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden'/> */}
               </NavLink>
-              <NavLink to="/market">
+              <NavLink to="/collection">
                 <li className="inline-block py-1 px-3 hover:underline hover:text-purple-800 font-semibold">
-                  All Market
+                  All Product
                 </li>
                 {/* <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden'/> */}
               </NavLink>
@@ -101,6 +103,7 @@ const Navbar = () => {
           {/* Icons Section */}
           <div className="flex items-center gap-4">
             <button
+            onClick={()=>setShowSearch(true)}
               aria-label="Search"
               className="text-2xl hover:bg-primary2 hover:text-white rounded-full p-2 duration-200"
             >
@@ -114,9 +117,9 @@ const Navbar = () => {
             </button>
             <button
               aria-label="Cart"
-              className="text-2xl hover:bg-primary2 hover:text-white rounded-full p-2 duration-200"
+              className="text-2xl hover:bg-primary2 flex flex-row hover:text-white rounded-full p-2 duration-200"
             >
-              <PiShoppingCartThin />
+              <PiShoppingCartThin />{getCartCount()}
             </button>
             <button
               onClick={() => window.open("http://localhost:5174/", "_blank")}
