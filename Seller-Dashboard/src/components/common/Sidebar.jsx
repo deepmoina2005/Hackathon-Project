@@ -27,7 +27,7 @@ const SIDEBAR_ITEMS = [
 		href: "/products",
 		children: [
 			{ name: "Add Product", href: "/add-product" },
-			{ name: "Product Category", href: "/product-category" },
+			{ name: "All Product", href: "/all-product" },
 		],
 	},
 	{ name: "Sales", icon: DollarSign, color: "#10B981", href: "/sales" },

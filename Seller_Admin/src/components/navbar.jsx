@@ -46,12 +46,12 @@ const Navbar = () => {
               Become a Seller
             </NavLink>
 
-            <NavLink
-              to="/login"
+            <button
+              onClick={() => window.open("http://localhost:5175/", "_blank")}
               className="hover:bg-primary2 text-primary2 font-semibold hover:text-white rounded-md border-2 border-primary2 px-6 py-2 duration-200 hidden md:block"
             >
               Login
-            </NavLink>
+            </button>
           </div>
 
           {/* Mobile Hamburger Menu */}

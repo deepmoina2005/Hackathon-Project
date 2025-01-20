@@ -1,5 +1,5 @@
-import Footer from '@/mainComponents/Footer'
-import Navbar from '@/mainComponents/Navbar/Navbar'
+import Footer from '@/components/Footer'
+import Navbar from '@/components/Navbar/Navbar'
 import React from 'react'
 
 const Seller = () => {
