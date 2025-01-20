@@ -29,7 +29,7 @@ const Navbar = () => {
                   About
                 </li>
               </NavLink>
-              <NavLink to="/">
+              <NavLink to="/contact">
                 <li className="inline-block py-1 px-3 hover:text-primary2 font-semibold">
                   Contact
                 </li>

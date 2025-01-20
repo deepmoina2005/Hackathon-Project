@@ -45,6 +45,7 @@ const Step2 = ({ formData, setFormData, nextStep, prevStep }) => {
   const [gstinImagePreview, setGstinImagePreview] = useState(null);
   const [sellerPhotoPreview, setSellerPhotoPreview] = useState(null);
   const [digitalSignaturePreview, setDigitalSignaturePreview] = useState(null);
+  const [lincesPreview, setLincesPreview] = useState(null);
   const [marketPhotoPreview, setMarketPhotoPreview] = useState(null);
 
   // File size limit (5 MB)
@@ -99,7 +100,7 @@ const Step2 = ({ formData, setFormData, nextStep, prevStep }) => {
 
   return (
     <div>
-      <h2 className="text-xl font-bold mb-4">Step 2: Business Information</h2>
+      <h2 className="text-xl font-bold mb-6 text-black">Step 2: Business Information</h2>
 
       {/* PAN Card Number */}
       <input
@@ -108,6 +109,15 @@ const Step2 = ({ formData, setFormData, nextStep, prevStep }) => {
         className="block w-full p-2 border border-gray-300 rounded mb-4"
         value={formData.panCardNumber || ""}
         onChange={(e) => setFormData({ ...formData, panCardNumber: e.target.value })}
+      />
+
+      {/* GSTIN Number */}
+      <input
+        type="text"
+        placeholder="GSTIN Number"
+        className="block w-full p-2 border border-gray-300 rounded mb-4"
+        value={formData.gstinNumber || ""}
+        onChange={(e) => setFormData({ ...formData, gstinNumber: e.target.value })}
       />
 
       {/* PAN Card Image Upload */}
@@ -127,15 +137,6 @@ const Step2 = ({ formData, setFormData, nextStep, prevStep }) => {
           />
         )}
       </div>
-
-      {/* GSTIN Number */}
-      <input
-        type="text"
-        placeholder="GSTIN Number"
-        className="block w-full p-2 border border-gray-300 rounded mb-4"
-        value={formData.gstinNumber || ""}
-        onChange={(e) => setFormData({ ...formData, gstinNumber: e.target.value })}
-      />
 
       {/* GSTIN Card Image Upload */}
       <div className="mb-4">
@@ -191,6 +192,24 @@ const Step2 = ({ formData, setFormData, nextStep, prevStep }) => {
         )}
       </div>
 
+      {/* Licences */}
+      <div className="mb-4">
+        <label className="block text-gray-700 mb-2">Upload Business License:</label>
+        <input
+          type="file"
+          accept="image/*"
+          onChange={(e) => handleFileChange(e, "licence", setLincesPreview)}
+          className="block w-full text-sm text-gray-700 border border-gray-300 rounded p-2"
+        />
+        {lincesPreview && (
+          <img
+            src={lincesPreview}
+            alt="Digital Signature Preview"
+            className="mt-2 w-32 h-32 object-cover rounded border"
+          />
+        )}
+      </div>
+
       {/* Market Photo */}
       <div className="mb-4">
         <label className="block text-gray-700 mb-2">Upload Market Photo (with GPS):</label>
@@ -213,13 +232,13 @@ const Step2 = ({ formData, setFormData, nextStep, prevStep }) => {
       <div className="flex justify-between">
         <button
           onClick={prevStep}
-          className="bg-gray-500 text-white px-4 py-2 rounded"
+          className="bg-white text-black border border-primary2 px-4 py-2 rounded"
         >
           Back
         </button>
         <button
           onClick={handleNext}
-          className="bg-blue-500 text-white px-4 py-2 rounded"
+          className="bg-primary2 text-white px-4 py-2 rounded"
         >
           Next
         </button>
