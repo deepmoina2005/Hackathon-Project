@@ -1,0 +1,53 @@
+.home-settings-body{
+    height: 100vh;
+    width: 85%;
+    margin-left: 15%;
+    background-color: #0a235eed;
+    position: fixed;
+}
+.change-banner{
+    width: 90%;
+    margin-left: 5%;
+    padding: 20px;
+    background-color: #283142;
+    margin-top: 10px;
+    color: white;
+}
+.change-banner h1{
+    margin-bottom: 10px;
+}
+.change-banner input {
+    cursor: pointer;
+}
+.change-theme-text{
+    width: 90%;
+    margin-left: 5%;
+    padding: 20px;
+    background-color: #283142;
+    margin-top: 10px;
+    color: white;
+}
+.change-banner button{
+    font-size: 15px;
+    width: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    background-color: green;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 10px;  
+    color: white;  
+}
+.change-theme-text button{
+    font-size: 15px;
+    width: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    background-color: green;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 10px;  
+    color: white;  
+}

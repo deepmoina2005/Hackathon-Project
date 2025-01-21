@@ -1,0 +1,51 @@
+/* Dashboard Styles */
+.dashboard {
+  height: 100vh;
+  width: 85%; 
+  margin-left: 15%; 
+  background-color: #0a235eed;
+  text-align: center;
+  position: fixed;
+  transition: width 0.3s ease;
+  overflow-y: scroll;
+}
+
+.dashboard-box {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; 
+}
+
+.boxes {
+  height: 400px;
+  width: 550px;
+  margin-top: 30px;
+  margin-left: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.chart {
+  height: 400px;
+  width: 550px;
+  background-color: #283142;
+  margin-top: 30px;
+  margin-left: 10px;
+  border-radius: 8px;
+  margin-right: 10px;
+  color: white;
+}
+
+.box {
+  height: 190px;
+  width: 270px;
+  background-color: #283142;
+  border-radius: 8px;
+  padding: 20px;
+  color: black;
+  transition: 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
+
